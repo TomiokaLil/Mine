@@ -1,0 +1,10 @@
+{
+  "revive_song": {
+    "sounds": [
+      {
+        "name": "revive_music/revive_song",
+        "stream": true
+      }
+    ]
+  }
+}

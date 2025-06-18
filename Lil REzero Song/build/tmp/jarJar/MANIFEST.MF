@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Specification-Title: revive_music
+Specification-Vendor: Lil Tomioka
+Implementation-Title: revive_music
+Implementation-Version: 1.1
+

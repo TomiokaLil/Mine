@@ -1,0 +1,55 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'eclipse'
+    id 'idea'
+}
+
+group = 'com.tunombre.revivemusic'
+version = '1.1'
+archivesBaseName = 'revive_music'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.19.2'
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                revive_music {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                revive_music {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title": "revive_music",
+            "Specification-Vendor": "Lil Tomioka",
+            "Implementation-Title": project.name,
+            "Implementation-Version": project.version
+        ])
+    }
+}
